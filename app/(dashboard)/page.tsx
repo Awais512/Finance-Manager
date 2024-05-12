@@ -1,6 +1,8 @@
-import { UserButton } from "@clerk/nextjs";
+"use client";
+
+import { useGetAccounts } from "@/features/accounts/api/use-get-account";
 
 const Home = () => {
-  return <h1>Home</h1>;
+  return <div>Home Page</div>;
 };
 export default Home;
