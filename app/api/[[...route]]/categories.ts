@@ -1,9 +1,5 @@
 import { db } from "@/db/drizzle";
-import {
-  categories,
-  insertAccountSchema,
-  insertCategorySchema,
-} from "@/db/schema";
+import { categories, insertCategorySchema } from "@/db/schema";
 import { clerkMiddleware, getAuth } from "@hono/clerk-auth";
 import { and, eq, inArray } from "drizzle-orm";
 import { Hono } from "hono";
