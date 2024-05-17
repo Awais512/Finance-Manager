@@ -22,6 +22,13 @@
       "when": 1715971482299,
       "tag": "0002_lyrical_maelstrom",
       "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "5",
+      "when": 1715984675618,
+      "tag": "0003_lame_sentinel",
+      "breakpoints": true
     }
   ]
 }
