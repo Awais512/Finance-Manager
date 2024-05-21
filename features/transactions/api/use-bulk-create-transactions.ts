@@ -20,11 +20,11 @@ export const useBulkDeleteTransactions = () => {
       return await res.json();
     },
     onSuccess: () => {
-      toast.success("Transactions created");
+      toast.success("Transactions deleted");
       queryClient.invalidateQueries({ queryKey: ["transactions"] });
     },
     onError: () => {
-      toast.error("Failed to create transactions");
+      toast.error("Failed to delete transactions");
     },
   });
 
