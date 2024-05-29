@@ -28,11 +28,11 @@ const app = new Hono().get(
       return c.json({ error: "Unauthorized" }, 401);
     }
     const defaultTo = new Date();
-    const defaultfrOm = subDays(defaultTo, 30);
+    const defaultfrom = subDays(defaultTo, 30);
 
     const startDate = from
       ? parse(from, "yyyy-MM-dd", new Date())
-      : defaultfrOm;
+      : defaultfrom;
     const endDate = to ? parse(to, "yyyy-MM-dd", new Date()) : defaultTo;
 
     const periodLength = differenceInDays(endDate, startDate) + 1;
@@ -75,8 +75,8 @@ const app = new Hono().get(
     );
     const [lastPeriod] = await fetchFinancialData(
       auth.userId,
-      startDate,
-      endDate
+      lastPeriodStart,
+      lastPeriodEnd
     );
 
     const incomeChange = calculatePercentageChange(
